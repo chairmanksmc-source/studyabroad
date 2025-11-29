@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARNATAKA STATE MINORITIES COMMISSION - STUDY ABROAD SCHOLARSHIP</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #eef3ff, #fefcf8);
+      margin: 0;
+      padding: 0;
+      color: #020024;
+    }
+
+    header {
+      text-align: center;
+      background: #0b076b;
+      color: white;
+      padding: 30px 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    header h2 {
+      margin: 8px 0 0;
+      font-weight: 400;
+      font-size: 20px;
+      color: #dce9ff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 25px 30px;
+      color: #020024;
+    }
+
+    details {
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #f6f9ff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 18px 20px;
+      font-size: 18px;
+      font-weight: 600;
+      background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(8, 26, 132, 1) 11%, rgba(0, 212, 255, 1) 100%);
+      color: white;
+      border-bottom: 1px solid #ccc;
+      transition: 0.3s;
+    }
+
+    summary:hover {
+      filter: brightness(1.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background-color: #ed0707;
+      color: #020024;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    tr {
+      background-color: #f9f9ff;
+      transition: 0.3s;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f5ff;
+    }
+
+    tr:hover {
+      background-color: #e8efff;
+      transform: scale(1.005);
+    }
+
+    a {
+      color: #020024;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .no-data {
+      padding: 10px 15px;
+      color: #555;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KARNATAKA STATE MINORITIES COMMISSION</h1>
+    <h2>STUDY ABROAD SCHOLARSHIP</h2>
+  </header>
+
+  <div class="container" id="scholarshipContainer"></div>
+
+  <script>
+    const scholarships = [
+      
+  {
+    "country": "UK",
+    "scholarship": "Chevening Scholarship",
+    "university": "UK Universities",
+    "level": "Masters",
+    "funding": "Full tuition + stipend",
+    "eligibility": "Indian citizens; leadership potential",
+    "deadline": "Nov 2025 (varies)",
+    "link": "https://chevening.org",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Edinburgh Global Scholarships",
+    "university": "University of Edinburgh",
+    "level": "Masters / PhD",
+    "funding": "Full / partial tuition fee",
+    "eligibility": "International students applying to eligible postgraduate programs; merit-based; open to all subjects.",
+    "deadline": "Feb–June (varies)",
+    "link": "https://www.ed.ac.uk/student-funding",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Bristol Think Big Scholarships",
+    "university": "University of Bristol",
+    "level": "Undergraduate / Masters",
+    "funding": "£6,500–£26,000 tuition coverage",
+    "eligibility": "Merit-based for international applicants to Bristol programs; all subjects eligible; automatic consideration.",
+    "deadline": "April",
+    "link": "https://www.bristol.ac.uk/think-big/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "Warwick Chancellor’s International Scholarships",
+    "university": "University of Warwick",
+    "level": "PhD",
+    "funding": "Full tuition + stipend",
+    "eligibility": "International PhD applicants to any discipline at Warwick; high academic excellence and research proposal required.",
+    "deadline": "Dec–Jan",
+    "link": "https://warwick.ac.uk/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Nottingham Developing Solutions Scholarship",
+    "university": "University of Nottingham",
+    "level": "Masters",
+    "funding": "Full / partial tuition",
+    "eligibility": "For students from Africa, India, Commonwealth countries; must demonstrate commitment to development.",
+    "deadline": "May",
+    "link": "https://www.nottingham.ac.uk/studywithus/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "Rhodes Scholarships at University of Oxford",
+    "university": "University of Oxford",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + stipend + travel allowance",
+    "eligibility": "Exceptional students from eligible countries; strong leadership and academic excellence required.",
+    "deadline": "July–Oct",
+    "link": "https://www.rhodeshouse.ox.ac.uk/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "Gates Cambridge Scholarships",
+    "university": "University of Cambridge",
+    "level": "Masters / PhD",
+    "funding": "Full cost (tuition + stipend + flights)",
+    "eligibility": "Outstanding applicants from outside the UK; based on leadership and academic ability.",
+    "deadline": "December",
+    "link": "https://www.gatescambridge.org/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "Clarendon Fund Scholarships",
+    "university": "University of Oxford",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + living expenses",
+    "eligibility": "All graduate applicants automatically considered based on merit.",
+    "deadline": "Varies by course",
+    "link": "https://www.ox.ac.uk/clarendon",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "Commonwealth Shared Scholarships",
+    "university": "Various UK Universities",
+    "level": "Masters",
+    "funding": "Full tuition + airfare + stipend",
+    "eligibility": "Students from Commonwealth countries pursuing development-related courses.",
+    "deadline": "December",
+    "link": "https://cscuk.fcdo.gov.uk/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "Imperial College President’s PhD Scholarships",
+    "university": "Imperial College London",
+    "level": "PhD",
+    "funding": "Full tuition + £25,000 stipend/year",
+    "eligibility": "Outstanding academic record and research potential required.",
+    "deadline": "November–March",
+    "link": "https://www.imperial.ac.uk/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Glasgow International Leadership Scholarships",
+    "university": "University of Glasgow",
+    "level": "Masters",
+    "funding": "£10,000 tuition discount",
+    "eligibility": "Merit-based; open to high-achieving international students.",
+    "deadline": "June",
+    "link": "https://www.gla.ac.uk/scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Manchester Global Futures Scholarship",
+    "university": "University of Manchester",
+    "level": "Undergraduate / Masters",
+    "funding": "£5,000–£10,000",
+    "eligibility": "Merit-based international award for academic excellence.",
+    "deadline": "June",
+    "link": "https://www.manchester.ac.uk/study/masters/funding/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Sussex Chancellor’s International Scholarships",
+    "university": "University of Sussex",
+    "level": "Masters",
+    "funding": "50% tuition fee reduction",
+    "eligibility": "Outstanding international students in eligible Masters programs.",
+    "deadline": "April",
+    "link": "https://www.sussex.ac.uk/study/masters/fees-and-scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Leeds International Excellence Scholarships",
+    "university": "University of Leeds",
+    "level": "Masters",
+    "funding": "Up to 50% tuition fee reduction",
+    "eligibility": "Merit-based; open to international postgraduate students.",
+    "deadline": "March–May",
+    "link": "https://courses.leeds.ac.uk/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Reading Vice-Chancellor Global Scholarships",
+    "university": "University of Reading",
+    "level": "Undergraduate / Masters",
+    "funding": "Up to £4,000 tuition discount",
+    "eligibility": "International students applying to any full-time degree course.",
+    "deadline": "May",
+    "link": "https://www.reading.ac.uk/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Sheffield International Undergraduate Merit Scholarships",
+    "university": "University of Sheffield",
+    "level": "Undergraduate",
+    "funding": "50% tuition waiver",
+    "eligibility": "Academic merit-based international students.",
+    "deadline": "April",
+    "link": "https://www.sheffield.ac.uk/international/fees-and-funding/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Exeter Global Excellence Scholarships",
+    "university": "University of Exeter",
+    "level": "Undergraduate / Masters",
+    "funding": "£5,000–£10,000",
+    "eligibility": "Merit-based; all subjects considered.",
+    "deadline": "April",
+    "link": "https://www.exeter.ac.uk/study/fees-funding/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Stirling International Awards",
+    "university": "University of Stirling",
+    "level": "Undergraduate / Masters",
+    "funding": "£2,000–£5,000 tuition reduction",
+    "eligibility": "International students demonstrating excellence.",
+    "deadline": "May",
+    "link": "https://www.stir.ac.uk/scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Dundee Global Excellence Scholarships",
+    "university": "University of Dundee",
+    "level": "Undergraduate / Masters",
+    "funding": "Up to £6,000 per year",
+    "eligibility": "Merit-based for international students applying to eligible programs.",
+    "deadline": "June",
+    "link": "https://www.dundee.ac.uk/scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Kent International Scholarships for Taught Masters",
+    "university": "University of Kent",
+    "level": "Masters",
+    "funding": "£3,000–£5,000 tuition reduction",
+    "eligibility": "International students with strong academic record.",
+    "deadline": "May",
+    "link": "https://www.kent.ac.uk/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Birmingham Global Masters Scholarship",
+    "university": "University of Birmingham",
+    "level": "Masters",
+    "funding": "£2,000–£10,000 tuition discount",
+    "eligibility": "Merit-based for international students applying to postgraduate taught programs.",
+    "deadline": "June",
+    "link": "https://www.birmingham.ac.uk/international/students/global-masters-scholarship.aspx",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Aberdeen International Scholarships",
+    "university": "University of Aberdeen",
+    "level": "Undergraduate / Masters",
+    "funding": "£3,000–£5,000 tuition reduction",
+    "eligibility": "Available for self-funded international students based on merit.",
+    "deadline": "June",
+    "link": "https://www.abdn.ac.uk/study/funding/",
+    "notes": ""
+  },
+  {
+    "country": "UK",
+    "scholarship": "University of Southampton Presidential Scholarships",
+    "university": "University of Southampton",
+    "level": "Masters / PhD",
+    "funding": "Partial to full tuition waiver",
+    "eligibility": "Awarded to top-performing international students.",
+    "deadline": "April",
+    "link": "https://www.southampton.ac.uk/scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "Stanford Knight-Hennessy Scholars",
+    "university": "Stanford University",
+    "level": "Masters / PhD",
+    "funding": "Full funding (tuition + stipend + travel)",
+    "eligibility": "All nationalities; leadership and innovation potential required.",
+    "deadline": "October",
+    "link": "https://knight-hennessy.stanford.edu/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "Fulbright Foreign Student Program",
+    "university": "Various US Universities",
+    "level": "Masters / PhD",
+    "funding": "Full funding (tuition, living, travel)",
+    "eligibility": "For international students; merit-based; country-specific commissions.",
+    "deadline": "Varies by country (Feb–Oct)",
+    "link": "https://foreign.fulbrightonline.org/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "Harvard University Scholarships",
+    "university": "Harvard University",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "Need-based full or partial tuition waiver",
+    "eligibility": "Open to international students demonstrating exceptional merit or financial need.",
+    "deadline": "December–January",
+    "link": "https://college.harvard.edu/financial-aid",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "Yale University Scholarships",
+    "university": "Yale University",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "$20,000 – $70,000 per year (need-based aid)",
+    "eligibility": "Open to all international students; based on family financial background.",
+    "deadline": "January",
+    "link": "https://finaid.yale.edu/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "AAUW International Fellowships",
+    "university": "Various US Institutions",
+    "level": "Masters / PhD / Postdoc",
+    "funding": "$20,000 – $50,000",
+    "eligibility": "Women who are not US citizens or permanent residents; pursuing graduate studies in the USA.",
+    "deadline": "November",
+    "link": "https://www.aauw.org/resources/programs/fellowships-grants/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "University of Chicago Graduate Fellowships",
+    "university": "University of Chicago",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + stipend",
+    "eligibility": "All international applicants with strong academic background.",
+    "deadline": "December–January",
+    "link": "https://grad.uchicago.edu/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "MIT Presidential Fellowships",
+    "university": "Massachusetts Institute of Technology",
+    "level": "PhD",
+    "funding": "Full tuition + monthly stipend + health insurance",
+    "eligibility": "Outstanding international graduate students in science, engineering, or management.",
+    "deadline": "December",
+    "link": "https://oge.mit.edu/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "University of Michigan International Scholarships",
+    "university": "University of Michigan",
+    "level": "Bachelors / Masters",
+    "funding": "Partial tuition waiver or stipend support",
+    "eligibility": "Merit-based and need-based international student awards.",
+    "deadline": "February–March",
+    "link": "https://finaid.umich.edu/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "Cornell University Financial Aid for International Students",
+    "university": "Cornell University",
+    "level": "Bachelors",
+    "funding": "Need-based up to full tuition",
+    "eligibility": "International undergraduate applicants demonstrating financial need.",
+    "deadline": "January",
+    "link": "https://admissions.cornell.edu/",
+    "notes": ""
+  },
+  {
+    "country": "USA",
+    "scholarship": "Columbia University Scholarships",
+    "university": "Columbia University",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + stipend (varies)",
+    "eligibility": "Based on academic excellence and research potential.",
+    "deadline": "December–January",
+    "link": "https://gsas.columbia.edu/",
+    "notes": ""
+  },
+  {
+    "country": "Canada",
+    "scholarship": "Vanier Canada Graduate Scholarships",
+    "university": "Canadian Universities",
+    "level": "PhD",
+    "funding": "CAD 50,000 per year × 3 years",
+    "eligibility": "Doctoral students demonstrating leadership, research potential, academic excellence.",
+    "deadline": "November",
+    "link": "https://vanier.gc.ca/",
+    "notes": ""
+  },
+  {
+    "country": "Canada",
+    "scholarship": "University of Toronto Lester B. Pearson International Scholarships",
+    "university": "University of Toronto",
+    "level": "Bachelors",
+    "funding": "Full tuition + books + residence + stipend",
+    "eligibility": "International students with outstanding academic achievement and creativity.",
+    "deadline": "January",
+    "link": "https://future.utoronto.ca/pearson/",
+    "notes": ""
+  },
+  {
+    "country": "Canada",
+    "scholarship": "University of British Columbia (UBC) Scholarships",
+    "university": "University of British Columbia",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "Partial to full tuition waiver",
+    "eligibility": "High-achieving international students; both merit- and need-based.",
+    "deadline": "December–January",
+    "link": "https://you.ubc.ca/",
+    "notes": ""
+  },
+  {
+    "country": "Canada",
+    "scholarship": "McGill University Entrance Scholarships",
+    "university": "McGill University",
+    "level": "Bachelors / Masters",
+    "funding": "CAD 3,000 – 12,000",
+    "eligibility": "For academically strong international students entering any program.",
+    "deadline": "January",
+    "link": "https://www.mcgill.ca/",
+    "notes": ""
+  },
+  {
+    "country": "Canada",
+    "scholarship": "University of Waterloo International Master’s Award of Excellence",
+    "university": "University of Waterloo",
+    "level": "Masters",
+    "funding": "CAD 2,500 per term × 5 terms",
+    "eligibility": "Outstanding international students in research-based programs.",
+    "deadline": "Varies by program",
+    "link": "https://uwaterloo.ca/",
+    "notes": ""
+  },
+  {
+    "country": "Canada",
+    "scholarship": "Pierre Elliott Trudeau Foundation Doctoral Scholarships",
+    "university": "Canadian Universities",
+    "level": "PhD",
+    "funding": "CAD 40,000 per year + leadership training",
+    "eligibility": "Doctoral candidates in social sciences and humanities with leadership focus.",
+    "deadline": "December",
+    "link": "https://www.trudeaufoundation.ca/",
+    "notes": ""
+  },
+  {
+    "country": "Germany",
+    "scholarship": "DAAD Scholarships for Development-Related Postgraduate Courses",
+    "university": "German Universities",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + monthly stipend + travel",
+    "eligibility": "Graduates from developing countries; at least 2 years work experience preferred.",
+    "deadline": "Varies (usually August–October)",
+    "link": "https://www.daad.de/en/",
+    "notes": ""
+  },
+  {
+    "country": "Germany",
+    "scholarship": "Heinrich Böll Foundation Scholarships",
+    "university": "German Universities",
+    "level": "Masters / PhD",
+    "funding": "Monthly stipend + tuition + travel allowance",
+    "eligibility": "International students committed to social and environmental causes.",
+    "deadline": "March / September",
+    "link": "https://www.boell.de/en/foundation/scholarships",
+    "notes": ""
+  },
+  {
+    "country": "Germany",
+    "scholarship": "Konrad-Adenauer-Stiftung (KAS) Scholarships",
+    "university": "German Universities",
+    "level": "Masters / PhD",
+    "funding": "€850 per month + tuition + travel",
+    "eligibility": "Students demonstrating strong academic performance and civic engagement.",
+    "deadline": "July",
+    "link": "https://www.kas.de/en/web/begabtenfoerderung-und-kultur",
+    "notes": ""
+  },
+  {
+    "country": "Germany",
+    "scholarship": "Friedrich Ebert Stiftung Scholarships",
+    "university": "German Universities",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "€830–€850 per month + health insurance + family allowance",
+    "eligibility": "Students with socio-political involvement and excellent grades.",
+    "deadline": "Rolling",
+    "link": "https://www.fes.de/studienfoerderung",
+    "notes": ""
+  },
+  {
+    "country": "Germany",
+    "scholarship": "Humboldt Research Fellowship",
+    "university": "Humboldt Foundation",
+    "level": "Postdoc / Experienced Researchers",
+    "funding": "€2,500–€3,000 per month + travel + family allowance",
+    "eligibility": "Postdoctoral researchers with high-quality research proposals.",
+    "deadline": "Rolling",
+    "link": "https://www.humboldt-foundation.de/",
+    "notes": ""
+  },
+  {
+    "country": "France",
+    "scholarship": "Eiffel Excellence Scholarship Programme",
+    "university": "French Universities",
+    "level": "Masters / PhD",
+    "funding": "Monthly allowance + international travel + health insurance",
+    "eligibility": "Non-French nationals aged below 30 (Masters) or 35 (PhD).",
+    "deadline": "January",
+    "link": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+    "notes": ""
+  },
+  {
+    "country": "France",
+    "scholarship": "École Normale Supérieure (ENS) International Selection",
+    "university": "ENS Paris",
+    "level": "Masters",
+    "funding": "€1,000/month for 3 years + accommodation",
+    "eligibility": "International students in arts, humanities, and sciences.",
+    "deadline": "December",
+    "link": "https://www.ens.psl.eu/en/academics/admissions/international-selection",
+    "notes": ""
+  },
+  {
+    "country": "France",
+    "scholarship": "Sciences Po Emile Boutmy Scholarships",
+    "university": "Sciences Po",
+    "level": "Bachelors / Masters",
+    "funding": "€3,000–€12,300 per year",
+    "eligibility": "Non-EU students applying for first-time admission.",
+    "deadline": "April",
+    "link": "https://www.sciencespo.fr/admissions/en/financial-information/emile-boutmy-scholarship/",
+    "notes": ""
+  },
+  {
+    "country": "France",
+    "scholarship": "INSEAD MBA Scholarships",
+    "university": "INSEAD Business School",
+    "level": "MBA",
+    "funding": "€10,000–€40,000",
+    "eligibility": "Diverse international applicants with leadership potential.",
+    "deadline": "Varies (each intake cycle)",
+    "link": "https://www.insead.edu/master-programmes/mba/financing",
+    "notes": ""
+  },
+  {
+    "country": "Netherlands",
+    "scholarship": "Orange Tulip Scholarship",
+    "university": "Various Dutch Universities",
+    "level": "Bachelors / Masters",
+    "funding": "Partial or full tuition + stipend",
+    "eligibility": "Offered via Nuffic for select countries including India.",
+    "deadline": "March–April",
+    "link": "https://www.nuffic.nl/en/subjects/orange-tulip-scholarship-programme/",
+    "notes": ""
+  },
+  {
+    "country": "Netherlands",
+    "scholarship": "Holland Scholarship",
+    "university": "Participating Dutch Universities",
+    "level": "Bachelors / Masters",
+    "funding": "€5,000 (one-time grant)",
+    "eligibility": "Non-EEA students applying for full-time programs in the Netherlands.",
+    "deadline": "May",
+    "link": "https://www.studyinnl.org/finances/holland-scholarship",
+    "notes": ""
+  },
+  {
+    "country": "Netherlands",
+    "scholarship": "Leiden University Excellence Scholarship (LExS)",
+    "university": "Leiden University",
+    "level": "Masters",
+    "funding": "€10,000–€15,000 tuition discount",
+    "eligibility": "Outstanding non-EU students applying to master's programs.",
+    "deadline": "February",
+    "link": "https://www.universiteitleiden.nl/en/education/admission-and-application/scholarships/lexs",
+    "notes": ""
+  },
+  {
+    "country": "Netherlands",
+    "scholarship": "TU Delft Excellence Scholarships (Justus & Louise van Effen)",
+    "university": "TU Delft",
+    "level": "Masters",
+    "funding": "Full tuition + €11,500 living expenses",
+    "eligibility": "Top international students admitted to MSc programs.",
+    "deadline": "December",
+    "link": "https://www.tudelft.nl/en/education/programmes/masters/tu-delft-excellence-scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "Netherlands",
+    "scholarship": "University of Amsterdam Merit Scholarship",
+    "university": "University of Amsterdam",
+    "level": "Masters",
+    "funding": "€2,000–€25,000",
+    "eligibility": "Non-EU students with high academic standing.",
+    "deadline": "January–March",
+    "link": "https://www.uva.nl/en/education/scholarships/ams.html",
+    "notes": ""
+  },
+  {
+    "country": "Sweden",
+    "scholarship": "Swedish Institute Scholarships for Global Professionals (SISGP)",
+    "university": "Swedish Universities",
+    "level": "Masters",
+    "funding": "Full tuition + SEK 11,000/month + travel grant",
+    "eligibility": "Students from eligible countries including India; leadership and work experience required.",
+    "deadline": "February",
+    "link": "https://si.se/en/si-scholarships-for-global-professionals/",
+    "notes": ""
+  },
+  {
+    "country": "Sweden",
+    "scholarship": "Chalmers IPOET Scholarships",
+    "university": "Chalmers University of Technology",
+    "level": "Masters",
+    "funding": "75% tuition fee reduction",
+    "eligibility": "Citizens of non-EU/EEA countries.",
+    "deadline": "January",
+    "link": "https://www.chalmers.se/en/education/fees-finance/scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "Sweden",
+    "scholarship": "Lund University Global Scholarship",
+    "university": "Lund University",
+    "level": "Bachelors / Masters",
+    "funding": "25–100% tuition reduction",
+    "eligibility": "Top academic achievers from outside EU/EEA.",
+    "deadline": "February",
+    "link": "https://www.lu.se/",
+    "notes": ""
+  },
+  {
+    "country": "Sweden",
+    "scholarship": "Uppsala University Global Scholarships",
+    "university": "Uppsala University",
+    "level": "Masters",
+    "funding": "Full tuition coverage",
+    "eligibility": "Non-EU students with high academic performance.",
+    "deadline": "February",
+    "link": "https://www.uu.se/en/admissions/scholarships/uppsala-university-global-scholarship/",
+    "notes": ""
+  },
+  {
+    "country": "Switzerland",
+    "scholarship": "Swiss Government Excellence Scholarships",
+    "university": "Swiss Universities",
+    "level": "Masters / PhD / Postdoc",
+    "funding": "Monthly stipend + tuition + housing allowance",
+    "eligibility": "For international researchers and artists.",
+    "deadline": "September–December",
+    "link": "https://www.sbfi.admin.ch/scholarships_eng",
+    "notes": ""
+  },
+  {
+    "country": "Switzerland",
+    "scholarship": "ETH Zurich Excellence Masters Scholarships",
+    "university": "ETH Zurich",
+    "level": "Masters",
+    "funding": "Full tuition + CHF 12,000 per semester",
+    "eligibility": "Outstanding students applying to ETH MSc programs.",
+    "deadline": "December",
+    "link": "https://ethz.ch/en/studies/financial/awards.html",
+    "notes": ""
+  },
+  {
+    "country": "Switzerland",
+    "scholarship": "University of Geneva Excellence Master Fellowships",
+    "university": "University of Geneva",
+    "level": "Masters",
+    "funding": "CHF 10 000 – CHF 15 000 per year",
+    "eligibility": "Outstanding students in science and related fields applying to the Faculty of Science.",
+    "deadline": "March",
+    "link": "https://www.unige.ch/sciences/en/masters/excellence-master-fellowships/",
+    "notes": ""
+  },
+  {
+    "country": "Italy",
+    "scholarship": "Italian Government Scholarships for Foreign Students",
+    "university": "Italian Universities",
+    "level": "Masters / PhD",
+    "funding": "Tuition waiver + €900 monthly stipend",
+    "eligibility": "Foreign students pursuing higher studies in Italy.",
+    "deadline": "June",
+    "link": "https://studyinitaly.esteri.it/en/call-for-procedure/",
+    "notes": ""
+  },
+  {
+    "country": "Italy",
+    "scholarship": "Bocconi Merit and International Awards",
+    "university": "Bocconi University",
+    "level": "Bachelors / Masters",
+    "funding": "Full tuition waiver + accommodation",
+    "eligibility": "High-achieving international applicants to Bocconi University.",
+    "deadline": "May",
+    "link": "https://www.unibocconi.eu/wps/wcm/connect/Bocconi/SitoPubblico_EN/Navigation+Tree/Home/",
+    "notes": ""
+  },
+  {
+    "country": "Spain",
+    "scholarship": "Erasmus Mundus Joint Master Degrees (EMJMD)",
+    "university": "European Consortium Universities",
+    "level": "Masters",
+    "funding": "Full tuition + monthly stipend + travel costs",
+    "eligibility": "Open to students worldwide for joint programs in EU countries.",
+    "deadline": "October – January (varies)",
+    "link": "https://erasmus-plus.ec.europa.eu/",
+    "notes": ""
+  },
+  {
+    "country": "Spain",
+    "scholarship": "La Caixa Postgraduate Fellowships",
+    "university": "Spanish Universities",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + monthly stipend + travel",
+    "eligibility": "Highly competitive fellowships for international students.",
+    "deadline": "February",
+    "link": "https://fundacionlacaixa.org/",
+    "notes": ""
+  },
+  {
+    "country": "China",
+    "scholarship": "Chinese Government Scholarship (CSC)",
+    "university": "Chinese Universities",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "Full tuition + stipend + accommodation",
+    "eligibility": "Open to international students through the Chinese Embassy.",
+    "deadline": "March – April",
+    "link": "https://www.campuschina.org/",
+    "notes": ""
+  },
+  {
+    "country": "China",
+    "scholarship": "Confucius Institute Scholarship",
+    "university": "Chinese Universities",
+    "level": "Bachelors / Masters",
+    "funding": "Full tuition + accommodation + stipend",
+    "eligibility": "For students studying Chinese language and culture.",
+    "deadline": "May",
+    "link": "https://english.hanban.org/",
+    "notes": ""
+  },
+  {
+    "country": "China",
+    "scholarship": "Belt and Road Scholarship (University-Specific)",
+    "university": "Various Chinese Universities",
+    "level": "Masters / PhD",
+    "funding": "Tuition waiver + stipend (varies)",
+    "eligibility": "For students from Belt and Road partner countries including India.",
+    "deadline": "Varies by university",
+    "link": "https://www.campuschina.org/",
+    "notes": ""
+  },
+  {
+    "country": "Japan",
+    "scholarship": "MEXT Scholarship (Japanese Government)",
+    "university": "Japanese Universities",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "Full tuition + monthly stipend + travel allowance",
+    "eligibility": "Students recommended via Japanese Embassy or University.",
+    "deadline": "April–May",
+    "link": "https://www.studyinjapan.go.jp/en/",
+    "notes": ""
+  },
+  {
+    "country": "Japan",
+    "scholarship": "ADB-Japan Scholarship Program",
+    "university": "University of Tokyo / Kyoto / Asian Institutes",
+    "level": "Masters",
+    "funding": "Full tuition + monthly allowance + travel",
+    "eligibility": "Students from ADB member countries including India.",
+    "deadline": "March",
+    "link": "https://www.adb.org/work-with-us/careers/japan-scholarship-program",
+    "notes": ""
+  },
+  {
+    "country": "South Korea",
+    "scholarship": "Global Korea Scholarship (GKS)",
+    "university": "Korean Universities",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "Full tuition + stipend + settlement allowance",
+    "eligibility": "International students recommended via Korean Embassy.",
+    "deadline": "March",
+    "link": "https://www.studyinkorea.go.kr/",
+    "notes": ""
+  },
+  {
+    "country": "South Korea",
+    "scholarship": "KAIST Scholarship",
+    "university": "Korea Advanced Institute of Science and Technology (KAIST)",
+    "level": "Bachelors / Masters / PhD",
+    "funding": "Full tuition + monthly allowance + health insurance",
+    "eligibility": "Outstanding students in science and engineering fields.",
+    "deadline": "March / September",
+    "link": "https://www.kaist.ac.kr/",
+    "notes": ""
+  },
+  {
+    "country": "Singapore",
+    "scholarship": "Singapore International Graduate Award (SINGA)",
+    "university": "A*STAR / NTU / NUS / SUTD",
+    "level": "PhD",
+    "funding": "Full tuition + monthly stipend + airfare",
+    "eligibility": "International students with strong research interest in STEM.",
+    "deadline": "June / December",
+    "link": "https://www.a-star.edu.sg/singa-award",
+    "notes": ""
+  },
+  {
+    "country": "Singapore",
+    "scholarship": "Nanyang Presidential Graduate Scholarships",
+    "university": "Nanyang Technological University (NTU)",
+    "level": "PhD",
+    "funding": "Full tuition + stipend + conference support",
+    "eligibility": "Exceptional graduates with research potential.",
+    "deadline": "December",
+    "link": "https://www.ntu.edu.sg/graduate-college/financial-matters/scholarships/ntu-scholarships",
+    "notes": ""
+  },
+  {
+    "country": "UAE",
+    "scholarship": "Khalifa University Graduate Scholarships",
+    "university": "Khalifa University",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + stipend + medical insurance",
+    "eligibility": "International students in engineering, science, and IT fields.",
+    "deadline": "April",
+    "link": "https://www.ku.ac.ae/scholarships",
+    "notes": ""
+  },
+  {
+    "country": "UAE",
+    "scholarship": "Masdar Institute Scholarships",
+    "university": "Masdar Institute of Science and Technology",
+    "level": "Masters / PhD",
+    "funding": "Full tuition + stipend + accommodation",
+    "eligibility": "International students in renewable energy and sustainability.",
+    "deadline": "May",
+    "link": "https://www.masdar.ac.ae/",
+    "notes": ""
+  },
+  {
+    "country": "Brazil / abroad",
+    "scholarship": "China – Chinese University Scholarships (individual universities)",
+    "university": "Various Chinese Universities",
+    "level": "Masters / PhD",
+    "funding": "Tuition waiver + stipend (varies)",
+    "eligibility": "Many Chinese universities offer their own international scholarships (apply directly to university portals).",
+    "deadline": "Varies",
+    "link": "https://www.zju.edu.cn/english/",
+    "notes": "Search for international scholarships"
+  },
+  {
+    "country": "Australia",
+    "scholarship": "ANU Global Diversity Scholarship",
+    "university": "Australian National University (ANU)",
+    "level": "Undergraduate / Postgraduate",
+    "funding": "AUD 25,000 tuition contribution",
+    "eligibility": "International students from underrepresented countries applying to ANU programs.",
+    "deadline": "Varies",
+    "link": "https://www.anu.edu.au/study/scholarships/",
+    "notes": ""
+  },
+  {
+    "country": "Australia",
+    "scholarship": "University of Sydney International Research Scholarships",
+    "university": "University of Sydney",
+    "level": "Masters / PhD",
+    "funding": "Tuition + living allowance",
+    "eligibility": "High-achieving students for research programs; aligned with supervisor/project areas.",
+    "deadline": "Annual (research deadlines)",
+    "link": "https://www.sydney.edu.au/",
+    "notes": ""
+  },
+  {
+    "country": "Australia",
+    "scholarship": "University of Queensland International Scholarships",
+    "university": "University of Queensland",
+    "level": "Undergraduate / Postgraduate",
+    "funding": "25–100% tuition",
+    "eligibility": "Merit-based; open to all nationalities; automatic or separate application.",
+    "deadline": "Varies",
+    "link": "https://scholarships.uq.edu.au/",
+    "notes": ""
+  },
+  {
+    "country": "Australia",
+    "scholarship": "Macquarie University Vice-Chancellor’s Scholarship",
+    "university": "Macquarie University",
+    "level": "Undergraduate / Postgraduate",
+    "funding": "Up to AUD 10,000 tuition fee reduction",
+    "eligibility": "Academic merit-based; open to all countries except Australia/NZ citizens.",
+    "deadline": "Rolling",
+    "link": "https://www.mq.edu.au/",
+    "notes": ""
+  },
+  {
+    "country": "Australia",
+    "scholarship": "UNSW International Scholarships",
+    "university": "University of New South Wales (UNSW)",
+    "level": "Undergraduate / Masters / PhD",
+    "funding": "Partial / full tuition, living allowance",
+    "eligibility": "Multiple scholarships for international students based on academic merit.",
+    "deadline": "Varies",
+    "link": "https://www.unsw.edu.au/",
+    "notes": ""
+  },
+  {
+    "country": "Australia",
+    "scholarship": "Destination Australia Scholarships",
+    "university": "Various Australian Regional Universities",
+    "level": "Undergraduate / Postgraduate",
+    "funding": "Tuition fee scholarship (amount varies)",
+    "eligibility": "For international and domestic students studying at regional Australian campuses; eligibility varies by provider and course.",
+    "deadline": "Varies by university/provider",
+    "link": "https://www.education.gov.au/destination-australia",
+    "notes": ""
+  },
+  {
+    "country": "Australia",
+    "scholarship": "Endeavour (legacy) — see Destination Australia & other Aus schemes",
+    "university": "Government of Australia / DFAT",
+    "level": "Masters / PhD / Short-term",
+    "funding": "Varies (legacy Endeavour finished; other programs available)",
+    "eligibility": "Note: Endeavour Leadership Program ended; Australia now runs other scholarship schemes (Australia Awards, Destination Australia). Check official DFAT/Education sites.",
+    "deadline": "Varies",
+    "link": "https://www.dfat.gov.au/ and https://www.education.gov.au/",
+    "notes": ""
+  },
+  {
+    "country": "New Zealand",
+    "scholarship": "University of Auckland International Student Excellence Scholarship",
+    "university": "University of Auckland",
+    "level": "Undergraduate / Postgraduate",
+    "funding": "NZD 10,000 towards tuition",
+    "eligibility": "For new international students with strong academic performance; all fields.",
+    "deadline": "Oct–Nov",
+    "link": "https://www.auckland.ac.nz/",
+    "notes": ""
+  },
+  {
+    "country": "New Zealand",
+    "scholarship": "Victoria University of Wellington Tongarewa Scholarship",
+    "university": "Victoria University of Wellington",
+    "level": "Undergraduate / Postgraduate",
+    "funding": "NZD 5,000–10,000",
+    "eligibility": "Academic merit and contribution to university community; all disciplines.",
+    "deadline": "June / Nov",
+    "link": "https://www.wgtn.ac.nz/",
+    "notes": ""
+  },
+  {
+    "country": "New Zealand",
+    "scholarship": "University of Otago Doctoral Scholarship",
+    "university": "University of Otago",
+    "level": "PhD",
+    "funding": "Full tuition + NZD 32,544 stipend",
+    "eligibility": "For new PhD students demonstrating academic excellence and research potential.",
+    "deadline": "Rolling",
+    "link": "https://www.otago.ac.nz/",
+    "notes": ""
+  },
+  {
+    "country": "New Zealand",
+    "scholarship": "Manaaki New Zealand Scholarships",
+    "university": "New Zealand Government (MFAT)",
+    "level": "Undergraduate / Masters / Short courses",
+    "funding": "Tuition, living allowance, travel, insurance (varies by award)",
+    "eligibility": "Applicants from eligible developing partner countries; selection based on academic merit and development potential.",
+    "deadline": "Application rounds vary (check portal)",
+    "link": "https://www.nzscholarships.govt.nz/",
+    "notes": ""
+  }
+
+    ];
+
+    const countryList = [
+      "United Kingdom (UK)",
+      "United States (USA)",
+      "Canada",
+      "Australia",
+      "New Zealand",
+      "Germany",
+      "France",
+      "Netherlands",
+      "Sweden",
+      "Switzerland",
+      "Italy",
+      "Spain",
+      "China",
+      "Japan",
+      "South Korea",
+      "Singapore",
+      "United Arab Emirates (UAE)",
+      "Brazil / Abroad"
+    ];
+
+    const container = document.getElementById("scholarshipContainer");
+
+    function createTable(country, data) {
+      if (data.length === 0) {
+        return `<p class="no-data">No scholarships listed yet for ${country}</p>`;
+      }
+      let rows = data.map(item => `
+        <tr>
+          <td>${item.scholarship}</td>
+          <td>${item.university}</td>
+          <td>${item.level}</td>
+          <td>${item.funding}</td>
+          <td>${item.eligibility}</td>
+          <td>${item.deadline}</td>
+          <td><a href="${item.link}" target="_blank">Visit</a></td>
+        </tr>
+      `).join("");
+
+      return `
+        <table>
+          <thead>
+            <tr>
+              <th>Scholarship</th>
+              <th>University</th>
+              <th>Level</th>
+              <th>Funding</th>
+              <th>Eligibility</th>
+              <th>Deadline</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      `;
+    }
+
+    countryList.forEach(c => {
+      const short = c.match(/\(([^)]+)\)/);
+      const countryCode = short ? short[1] : c;
+      const filtered = scholarships.filter(s => s.country.toLowerCase() === countryCode.toLowerCase());
+      const section = `
+        <details>
+          <summary>${c}</summary>
+          ${createTable(c, filtered)}
+        </details>
+      `;
+      container.innerHTML += section;
+    });
+  </script>
+</body>
+</html>
